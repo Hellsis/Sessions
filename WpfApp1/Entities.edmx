@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище SessionsModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="agents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="MiddleName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="DealShare" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="apartments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address_City" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Street" Type="varchar" MaxLength="50" />
+          <Property Name="Address_House" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Number" Type="varchar" MaxLength="50" />
+          <Property Name="Coordinate_latitude" Type="varchar" MaxLength="50" />
+          <Property Name="Coordinate_longitude" Type="varchar" MaxLength="50" />
+          <Property Name="TotalArea" Type="float" />
+          <Property Name="Rooms" Type="varchar" MaxLength="50" />
+          <Property Name="Floor" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="clients">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="MiddleName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="districts">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="area" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="houses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address_City" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Street" Type="varchar" MaxLength="50" />
+          <Property Name="Address_House" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Number" Type="varchar" MaxLength="50" />
+          <Property Name="Coordinate_latitude" Type="varchar" MaxLength="50" />
+          <Property Name="Coordinate_longitude" Type="varchar" MaxLength="50" />
+          <Property Name="TotalFloors" Type="varchar" MaxLength="50" />
+          <Property Name="TotalArea" Type="float" />
+        </EntityType>
+        <EntityType Name="lands">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address_City" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Street" Type="varchar" MaxLength="50" />
+          <Property Name="Address_House" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Number" Type="varchar" MaxLength="50" />
+          <Property Name="Coordinate_latitude" Type="varchar" MaxLength="50" />
+          <Property Name="Coordinate_longitude" Type="varchar" MaxLength="50" />
+          <Property Name="TotalArea" Type="float" />
+        </EntityType>
+        <EntityContainer Name="Хранилище SessionsModelContainer">
+          <EntitySet Name="agents" EntityType="Self.agents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="apartments" EntityType="Self.apartments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="clients" EntityType="Self.clients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="districts" EntityType="Self.districts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="houses" EntityType="Self.houses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="lands" EntityType="Self.lands" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SessionsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="agent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DealShare" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="apartment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address_City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Street" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_House" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Coordinate_latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Coordinate_longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TotalArea" Type="Double" />
+          <Property Name="Rooms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Floor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="client">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="district">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="area" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="house">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address_City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Street" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_House" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Coordinate_latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Coordinate_longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TotalFloors" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TotalArea" Type="Double" />
+        </EntityType>
+        <EntityType Name="land">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address_City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Street" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_House" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Coordinate_latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Coordinate_longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TotalArea" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="agents" EntityType="Self.agent" />
+          <EntitySet Name="apartments" EntityType="Self.apartment" />
+          <EntitySet Name="clients" EntityType="Self.client" />
+          <EntitySet Name="districts" EntityType="Self.district" />
+          <EntitySet Name="houses" EntityType="Self.house" />
+          <EntitySet Name="lands" EntityType="Self.land" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище SessionsModelContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="agents">
+            <EntityTypeMapping TypeName="SessionsModel.agent">
+              <MappingFragment StoreEntitySet="agents">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DealShare" ColumnName="DealShare" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="apartments">
+            <EntityTypeMapping TypeName="SessionsModel.apartment">
+              <MappingFragment StoreEntitySet="apartments">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+                <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+                <ScalarProperty Name="Address_House" ColumnName="Address_House" />
+                <ScalarProperty Name="Address_Number" ColumnName="Address_Number" />
+                <ScalarProperty Name="Coordinate_latitude" ColumnName="Coordinate_latitude" />
+                <ScalarProperty Name="Coordinate_longitude" ColumnName="Coordinate_longitude" />
+                <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+                <ScalarProperty Name="Rooms" ColumnName="Rooms" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="clients">
+            <EntityTypeMapping TypeName="SessionsModel.client">
+              <MappingFragment StoreEntitySet="clients">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="districts">
+            <EntityTypeMapping TypeName="SessionsModel.district">
+              <MappingFragment StoreEntitySet="districts">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="area" ColumnName="area" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="houses">
+            <EntityTypeMapping TypeName="SessionsModel.house">
+              <MappingFragment StoreEntitySet="houses">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+                <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+                <ScalarProperty Name="Address_House" ColumnName="Address_House" />
+                <ScalarProperty Name="Address_Number" ColumnName="Address_Number" />
+                <ScalarProperty Name="Coordinate_latitude" ColumnName="Coordinate_latitude" />
+                <ScalarProperty Name="Coordinate_longitude" ColumnName="Coordinate_longitude" />
+                <ScalarProperty Name="TotalFloors" ColumnName="TotalFloors" />
+                <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lands">
+            <EntityTypeMapping TypeName="SessionsModel.land">
+              <MappingFragment StoreEntitySet="lands">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+                <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+                <ScalarProperty Name="Address_House" ColumnName="Address_House" />
+                <ScalarProperty Name="Address_Number" ColumnName="Address_Number" />
+                <ScalarProperty Name="Coordinate_latitude" ColumnName="Coordinate_latitude" />
+                <ScalarProperty Name="Coordinate_longitude" ColumnName="Coordinate_longitude" />
+                <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp1.Supplies"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Supplies" Height="450" Width="800">
+    <Grid>
+        <Label Content="Add" HorizontalAlignment="Left" Height="27" Margin="101,25,0,0" VerticalAlignment="Top" Width="58"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="44,85,0,0" VerticalAlignment="Top" />
+        <TextBox HorizontalAlignment="Left" Height="29" Margin="101,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" x:Name="Price"/>
+        <Label Content="Agent" HorizontalAlignment="Left" Margin="23,123,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="101,119,0,0" VerticalAlignment="Top" Width="110" x:Name="AId"/>
+        <Label Content="Client" HorizontalAlignment="Left" Margin="23,158,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="101,154,0,0" VerticalAlignment="Top" Width="110" x:Name="CId" RenderTransformOrigin="0.544,1.337"/>
+        <Label Content="Apartament" HorizontalAlignment="Left" Margin="10,193,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="101,189,0,0" VerticalAlignment="Top" Width="110" x:Name="ApId" RenderTransformOrigin="0.544,1.337"/>
+        <Label Content="House" HorizontalAlignment="Left" Margin="23,228,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="101,224,0,0" VerticalAlignment="Top" Width="110" x:Name="HId" RenderTransformOrigin="0.544,1.337"/>
+        <Label Content="Land" HorizontalAlignment="Left" Margin="27,263,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="101,259,0,0" VerticalAlignment="Top" Width="110" x:Name="LId" RenderTransformOrigin="0.544,1.337"/>
+        <Label Content="Delete" HorizontalAlignment="Left" Height="27" Margin="359,25,0,0" VerticalAlignment="Top" Width="58"/>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="301,84,0,0" VerticalAlignment="Top" />
+        <TextBox HorizontalAlignment="Left" Height="29" Margin="334,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" x:Name="IdD"/>
+        <Label Content="Update" HorizontalAlignment="Left" Height="27" Margin="658,25,0,0" VerticalAlignment="Top" Width="58"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="601,120,0,0" VerticalAlignment="Top" />
+        <TextBox HorizontalAlignment="Left" Height="29" Margin="658,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" x:Name="PriceU"/>
+        <Label Content="Agent" HorizontalAlignment="Left" Margin="580,158,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="658,154,0,0" VerticalAlignment="Top" Width="110" x:Name="AIdU"/>
+        <Label Content="Client" HorizontalAlignment="Left" Margin="580,193,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="658,189,0,0" VerticalAlignment="Top" Width="110" x:Name="CIdU" RenderTransformOrigin="0.544,1.337"/>
+        <Label Content="Apartament" HorizontalAlignment="Left" Margin="567,228,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="658,224,0,0" VerticalAlignment="Top" Width="110" x:Name="ApIdU" RenderTransformOrigin="0.544,1.337"/>
+        <Label Content="House" HorizontalAlignment="Left" Margin="580,263,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="658,259,0,0" VerticalAlignment="Top" Width="110" x:Name="HIdU" RenderTransformOrigin="0.544,1.337"/>
+        <Label Content="Land" HorizontalAlignment="Left" Margin="584,298,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Height="30" Margin="658,294,0,0" VerticalAlignment="Top" Width="110" x:Name="LIdU" RenderTransformOrigin="0.544,1.337"/>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="625,86,0,0" VerticalAlignment="Top" />
+        <TextBox HorizontalAlignment="Left" Height="29" Margin="658,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" x:Name="IdU"/>
+        <Button Content="Add" HorizontalAlignment="Left" Height="26" Margin="101,338,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Height="26" Margin="351,140,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click_1"/>
+        <Button Content="Update" HorizontalAlignment="Left" Height="26" Margin="658,346,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click_2"/>
+
+    </Grid>
+</Window>

@@ -15,30 +15,25 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Логика взаимодействия для Window1.xaml
+    /// Логика взаимодействия для Main3.xaml
     /// </summary>
-    public partial class Main : Window
+    public partial class Main3 : Window
     {
-        public Main()
+        public Main3()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainS1 s1 = new MainS1();
-            s1.Show();
+            Demands dem = new Demands();
+            dem.Show();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MainS2 s2 = new MainS2();
-            s2.Show();
-        }
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Main3 s2 = new Main3();
-            s2.Show();
+            Supplies sup = new Supplies();
+            sup.Show();
         }
     }
 }

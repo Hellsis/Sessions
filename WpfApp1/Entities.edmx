@@ -15,6 +15,26 @@
           <Property Name="LastName" Type="varchar" MaxLength="50" />
           <Property Name="DealShare" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="apartment-demands">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address_City" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Street" Type="varchar" MaxLength="50" />
+          <Property Name="Address_House" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Number" Type="varchar" MaxLength="50" />
+          <Property Name="MinPrice" Type="int" />
+          <Property Name="MaxPrice" Type="int" />
+          <Property Name="AgentId" Type="int" Nullable="false" />
+          <Property Name="ClientId" Type="int" Nullable="false" />
+          <Property Name="MinArea" Type="varchar" MaxLength="50" />
+          <Property Name="MaxArea" Type="varchar" MaxLength="50" />
+          <Property Name="MinRooms" Type="varchar" MaxLength="50" />
+          <Property Name="MaxRooms" Type="varchar" MaxLength="50" />
+          <Property Name="MinFloor" Type="varchar" MaxLength="50" />
+          <Property Name="MaxFloor" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="apartments">
           <Key>
             <PropertyRef Name="Id" />
@@ -48,6 +68,26 @@
           <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="area" Type="varchar(max)" Nullable="false" />
         </EntityType>
+        <EntityType Name="house-demands">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address_City" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Street" Type="varchar" MaxLength="50" />
+          <Property Name="Address_House" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Number" Type="varchar" MaxLength="50" />
+          <Property Name="MinPrice" Type="int" />
+          <Property Name="MaxPrice" Type="int" />
+          <Property Name="AgentId" Type="int" Nullable="false" />
+          <Property Name="ClientId" Type="int" Nullable="false" />
+          <Property Name="MinFloors" Type="varchar" MaxLength="50" />
+          <Property Name="MaxFloors" Type="varchar" MaxLength="50" />
+          <Property Name="MinArea" Type="varchar" MaxLength="50" />
+          <Property Name="MaxArea" Type="varchar" MaxLength="50" />
+          <Property Name="MinRooms" Type="varchar" MaxLength="50" />
+          <Property Name="MaxRooms" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="houses">
           <Key>
             <PropertyRef Name="Id" />
@@ -62,6 +102,22 @@
           <Property Name="TotalFloors" Type="varchar" MaxLength="50" />
           <Property Name="TotalArea" Type="float" />
         </EntityType>
+        <EntityType Name="land-demands">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address_City" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Street" Type="varchar" MaxLength="50" />
+          <Property Name="Address_House" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Number" Type="varchar" MaxLength="50" />
+          <Property Name="MinPrice" Type="int" />
+          <Property Name="MaxPrice" Type="int" />
+          <Property Name="AgentId" Type="int" Nullable="false" />
+          <Property Name="ClientId" Type="int" Nullable="false" />
+          <Property Name="MinArea" Type="varchar" MaxLength="50" />
+          <Property Name="MaxArea" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="lands">
           <Key>
             <PropertyRef Name="Id" />
@@ -75,13 +131,29 @@
           <Property Name="Coordinate_longitude" Type="varchar" MaxLength="50" />
           <Property Name="TotalArea" Type="float" />
         </EntityType>
+        <EntityType Name="supplies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Price" Type="int" />
+          <Property Name="AgentId" Type="int" />
+          <Property Name="ClientId" Type="int" />
+          <Property Name="ApartmentId" Type="int" />
+          <Property Name="HouseId" Type="int" />
+          <Property Name="LandId" Type="int" />
+        </EntityType>
         <EntityContainer Name="Хранилище SessionsModelContainer">
           <EntitySet Name="agents" EntityType="Self.agents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="apartment-demands" EntityType="Self.apartment-demands" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="apartments" EntityType="Self.apartments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="clients" EntityType="Self.clients" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="districts" EntityType="Self.districts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="house-demands" EntityType="Self.house-demands" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="houses" EntityType="Self.houses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="land-demands" EntityType="Self.land-demands" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="lands" EntityType="Self.lands" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="supplies" EntityType="Self.supplies" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -97,6 +169,26 @@
           <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="DealShare" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="apartment_demands">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address_City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Street" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_House" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MinPrice" Type="Int32" />
+          <Property Name="MaxPrice" Type="Int32" />
+          <Property Name="AgentId" Type="Int32" Nullable="false" />
+          <Property Name="ClientId" Type="Int32" Nullable="false" />
+          <Property Name="MinArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MaxArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MinRooms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MaxRooms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MinFloor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MaxFloor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="apartment">
           <Key>
@@ -131,6 +223,26 @@
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="area" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
+        <EntityType Name="house_demands">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address_City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Street" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_House" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MinPrice" Type="Int32" />
+          <Property Name="MaxPrice" Type="Int32" />
+          <Property Name="AgentId" Type="Int32" Nullable="false" />
+          <Property Name="ClientId" Type="Int32" Nullable="false" />
+          <Property Name="MinFloors" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MaxFloors" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MinArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MaxArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MinRooms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MaxRooms" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="house">
           <Key>
             <PropertyRef Name="Id" />
@@ -145,6 +257,22 @@
           <Property Name="TotalFloors" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TotalArea" Type="Double" />
         </EntityType>
+        <EntityType Name="land_demands">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address_City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Street" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_House" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MinPrice" Type="Int32" />
+          <Property Name="MaxPrice" Type="Int32" />
+          <Property Name="AgentId" Type="Int32" Nullable="false" />
+          <Property Name="ClientId" Type="Int32" Nullable="false" />
+          <Property Name="MinArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MaxArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="land">
           <Key>
             <PropertyRef Name="Id" />
@@ -158,13 +286,29 @@
           <Property Name="Coordinate_longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TotalArea" Type="Double" />
         </EntityType>
+        <EntityType Name="supply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="AgentId" Type="Int32" />
+          <Property Name="ClientId" Type="Int32" />
+          <Property Name="ApartmentId" Type="Int32" />
+          <Property Name="HouseId" Type="Int32" />
+          <Property Name="LandId" Type="Int32" />
+        </EntityType>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="agents" EntityType="Self.agent" />
+          <EntitySet Name="apartment_demands" EntityType="Self.apartment_demands" />
           <EntitySet Name="apartments" EntityType="Self.apartment" />
           <EntitySet Name="clients" EntityType="Self.client" />
           <EntitySet Name="districts" EntityType="Self.district" />
+          <EntitySet Name="house_demands" EntityType="Self.house_demands" />
           <EntitySet Name="houses" EntityType="Self.house" />
+          <EntitySet Name="land_demands" EntityType="Self.land_demands" />
           <EntitySet Name="lands" EntityType="Self.land" />
+          <EntitySet Name="supplies" EntityType="Self.supply" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -180,6 +324,27 @@
                 <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="DealShare" ColumnName="DealShare" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="apartment_demands">
+            <EntityTypeMapping TypeName="SessionsModel.apartment_demands">
+              <MappingFragment StoreEntitySet="apartment-demands">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+                <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+                <ScalarProperty Name="Address_House" ColumnName="Address_House" />
+                <ScalarProperty Name="Address_Number" ColumnName="Address_Number" />
+                <ScalarProperty Name="MinPrice" ColumnName="MinPrice" />
+                <ScalarProperty Name="MaxPrice" ColumnName="MaxPrice" />
+                <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="MinArea" ColumnName="MinArea" />
+                <ScalarProperty Name="MaxArea" ColumnName="MaxArea" />
+                <ScalarProperty Name="MinRooms" ColumnName="MinRooms" />
+                <ScalarProperty Name="MaxRooms" ColumnName="MaxRooms" />
+                <ScalarProperty Name="MinFloor" ColumnName="MinFloor" />
+                <ScalarProperty Name="MaxFloor" ColumnName="MaxFloor" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -219,6 +384,27 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="house_demands">
+            <EntityTypeMapping TypeName="SessionsModel.house_demands">
+              <MappingFragment StoreEntitySet="house-demands">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+                <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+                <ScalarProperty Name="Address_House" ColumnName="Address_House" />
+                <ScalarProperty Name="Address_Number" ColumnName="Address_Number" />
+                <ScalarProperty Name="MinPrice" ColumnName="MinPrice" />
+                <ScalarProperty Name="MaxPrice" ColumnName="MaxPrice" />
+                <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="MinFloors" ColumnName="MinFloors" />
+                <ScalarProperty Name="MaxFloors" ColumnName="MaxFloors" />
+                <ScalarProperty Name="MinArea" ColumnName="MinArea" />
+                <ScalarProperty Name="MaxArea" ColumnName="MaxArea" />
+                <ScalarProperty Name="MinRooms" ColumnName="MinRooms" />
+                <ScalarProperty Name="MaxRooms" ColumnName="MaxRooms" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="houses">
             <EntityTypeMapping TypeName="SessionsModel.house">
               <MappingFragment StoreEntitySet="houses">
@@ -234,6 +420,23 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="land_demands">
+            <EntityTypeMapping TypeName="SessionsModel.land_demands">
+              <MappingFragment StoreEntitySet="land-demands">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+                <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+                <ScalarProperty Name="Address_House" ColumnName="Address_House" />
+                <ScalarProperty Name="Address_Number" ColumnName="Address_Number" />
+                <ScalarProperty Name="MinPrice" ColumnName="MinPrice" />
+                <ScalarProperty Name="MaxPrice" ColumnName="MaxPrice" />
+                <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="MinArea" ColumnName="MinArea" />
+                <ScalarProperty Name="MaxArea" ColumnName="MaxArea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="lands">
             <EntityTypeMapping TypeName="SessionsModel.land">
               <MappingFragment StoreEntitySet="lands">
@@ -245,6 +448,19 @@
                 <ScalarProperty Name="Coordinate_latitude" ColumnName="Coordinate_latitude" />
                 <ScalarProperty Name="Coordinate_longitude" ColumnName="Coordinate_longitude" />
                 <ScalarProperty Name="TotalArea" ColumnName="TotalArea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="supplies">
+            <EntityTypeMapping TypeName="SessionsModel.supply">
+              <MappingFragment StoreEntitySet="supplies">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="ApartmentId" ColumnName="ApartmentId" />
+                <ScalarProperty Name="HouseId" ColumnName="HouseId" />
+                <ScalarProperty Name="LandId" ColumnName="LandId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

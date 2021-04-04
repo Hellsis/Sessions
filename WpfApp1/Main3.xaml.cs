@@ -35,5 +35,11 @@ namespace WpfApp1
             Supplies sup = new Supplies();
             sup.Show();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Information inf = new Information();
+            inf.Show();
+        }
     }
 }

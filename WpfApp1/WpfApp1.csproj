@@ -109,6 +109,9 @@
     <Compile Include="house_demands.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Information.xaml.cs">
+      <DependentUpon>Information.xaml</DependentUpon>
+    </Compile>
     <Compile Include="land.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
@@ -163,6 +166,10 @@
     <Page Include="House.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Information.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Land.xaml">
       <Generator>MSBuild:Compile</Generator>

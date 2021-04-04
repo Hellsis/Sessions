@@ -13,6 +13,7 @@
         </Grid.ColumnDefinitions>
         <Button Grid.ColumnSpan="2" Content="Demands" HorizontalAlignment="Left" Height="29" Margin="66,155,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click"/>
         <Button Grid.ColumnSpan="2" Content="Supplies" HorizontalAlignment="Left" Height="29" Margin="66,219,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_1"/>
+        <Button Content="Information of clients and agents" HorizontalAlignment="Left" VerticalAlignment="Top" Width="239" Grid.ColumnSpan="2" Margin="30,280,0,0" Height="29" Click="Button_Click_2"/>
 
     </Grid>
 </Window>
